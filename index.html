@@ -8,6 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      // Check if using www subdomain
+      if (window.location.hostname.startsWith('www.')) {
+        // Redirect to non-www version (preserving path and query parameters)
+        window.location.href = window.location.href.replace('www.', '');
+      }
+    </script>
 </head>
 <body>
     <!-- The rest of your HTML remains exactly the same -->
