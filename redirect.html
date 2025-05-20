@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    // Check if we're on the www subdomain
+    if (window.location.hostname.startsWith('www.')) {
+      // Extract the path and query string
+      const pathAndQuery = window.location.pathname + window.location.search;
+      // Create the new URL without www
+      const newUrl = 'https://' + window.location.hostname.replace('www.', '') + pathAndQuery;
+      // Redirect
+      window.location.href = newUrl;
+    } else {
+      // If somehow we end up here from the non-www domain, go to the main page
+      window.location.href = 'https://prospana.com';
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="https://prospana.com">prospana.com</a>...</p>
+</body>
+</html>
